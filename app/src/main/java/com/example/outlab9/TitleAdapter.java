@@ -8,6 +8,7 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+
 import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
@@ -15,7 +16,7 @@ import java.util.List;
 public class TitleAdapter extends RecyclerView.Adapter<Title> {
     List<String> list;
     public TitleAdapter(List<String>l){
-        list=l;
+        this.list=l;
     }
     @NonNull
     @Override
@@ -45,4 +46,7 @@ public class TitleAdapter extends RecyclerView.Adapter<Title> {
         super.onAttachedToRecyclerView(recyclerView);
     }
 
+    public void setData(List<String> list) {
+        this.list=list;
+    }
 }
